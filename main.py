@@ -30,7 +30,7 @@ def print_most_suitable_link_station(target_point: Point, link_stations_raw: Lis
     )
 
     if link_station is None:
-        print(f'No link station within reach for point {target_point.x}, {target_point.y}')
+        print(f'No link station within reach for point {target_point.x},{target_point.y}')
     else:
         print(
             f'Best link station for point '
@@ -41,24 +41,24 @@ def print_most_suitable_link_station(target_point: Point, link_stations_raw: Lis
 
 
 if __name__ == '__main__':
-    link_stations_raw = [
+    link_stations_input = [
         [0, 0, 10],
         [20, 20, 5],
         [10, 0, 12]
     ]
     print_most_suitable_link_station(
         target_point=Point(0, 0),
-        link_stations_raw=link_stations_raw
+        link_stations_raw=link_stations_input
     )
     print_most_suitable_link_station(
         target_point=Point(100, 100),
-        link_stations_raw=link_stations_raw
+        link_stations_raw=link_stations_input
     )
     print_most_suitable_link_station(
         target_point=Point(15, 10),
-        link_stations_raw=link_stations_raw
+        link_stations_raw=link_stations_input
     )
     print_most_suitable_link_station(
         target_point=Point(18, 18),
-        link_stations_raw=link_stations_raw
+        link_stations_raw=link_stations_input
     )
